@@ -1,0 +1,49 @@
+#pragma once
+#include <cstdint>
+
+
+struct BIOS {
+	uint8_t raw[256];
+	uint8_t day;
+	uint8_t month;
+	uint16_t year;
+	uint32_t consoleType;
+	char CompanyName[36];
+	char makerID[36];
+};
+
+enum UNKVARS {
+	VAR1 = 0x00000825,
+	VAR2 = 0x00001025,
+	VAR3 = 0x00001825,
+	VAR4 = 0x00002025,
+	VAR5 = 0x00002825,
+	VAR6 = 0x00003025,
+	VAR7 = 0x00003825,
+	VAR8 = 0x00004025,
+	VAR9 = 0x00004825,
+	VAR10 = 0x00005025,
+	VAR11 = 0x00005825,
+	VAR12 = 0x00006025,
+	VAR13 = 0x00006825,
+	VAR14 = 0x00007025,
+	VAR15 = 0x00007825,
+	VAR16 = 0x00008025,
+	VAR17 = 0x00008825,
+	VAR18 = 0x00009025,
+	VAR19 = 0x00009825,
+	VAR20 = 0x0000a025,
+	VAR21 = 0x0000a825,
+	VAR22 = 0x0000b025,
+	VAR23 = 0x0000b825,
+	VAR24 = 0x0000c025,
+	VAR25 = 0x0000c825,
+	VAR26 = 0x0000d025,
+	VAR27 = 0x0000d825,
+	VAR28 = 0x0000e025,
+	VAR29 = 0x0000e825,
+	VAR30 = 0x0000f025,
+	VAR31 = 0x0000f825,
+};
+
+

@@ -1,0 +1,27 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)Build\$(MSBuildProjectName)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>
+        $(SolutionDir)SOURCE;
+        $(SolutionDir)SOURCE\ENGINE;
+        $(SolutionDir)SOURCE\ENGINE\IOPort;
+        $(SolutionDir)SOURCE\ENGINE\Expansion;
+        $(SolutionDir)SOURCE\ENGINE\MIPS;
+        $(SolutionDir)SOURCE\ENGINE\SCRATCHPAD;
+        %(AdditionalIncludeDirectories)
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>
+        $(SolutionDir)Build\IOPort\$(Configuration);
+        $(SolutionDir)Build\Expansion\$(Configuration);
+        $(SolutionDir)Build\MIPS\$(Configuration);
+        %(AdditionalLibraryDirectories)
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
